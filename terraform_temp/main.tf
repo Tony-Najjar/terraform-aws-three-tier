@@ -9,3 +9,9 @@ module "networking" {
   private_subnet_1 = var.private_subnet_1
   private_subnet_2 = var.private_subnet_2
 }
+module "security" {
+  source = "./modules/security"
+
+  project_name = var.project_name
+  vpc_id       = module.networking.vpc_id
+}
