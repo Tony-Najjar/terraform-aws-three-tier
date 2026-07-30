@@ -35,3 +35,20 @@ variable "private_subnet_2" {
   type    = string
   default = "10.0.12.0/24"
 }
+variable "instance_type" {
+  type    = string
+  default = "t2.micro"
+}
+variable "db_username" {
+  type = string
+}
+
+variable "db_password" {
+  type      = string
+  sensitive = true
+}
+variable "alert_email" {
+
+  type = string
+
+}
