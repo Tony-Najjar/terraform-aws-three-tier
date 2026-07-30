@@ -1,0 +1,20 @@
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Terraform variables (may contain secrets)
+*.tfvars
+!terraform.tfvars.example
+
+# Terraform cache
+.terraform/
+
+# Terraform lock file
+# Keep this file committed for provider version consistency
+# .terraform.lock.hcl
+
+# Crash logs
+crash.log
+
+# Environment files
+.env
