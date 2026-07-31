@@ -77,8 +77,8 @@ module "autoscaling" {
   private_subnet_2 = module.networking.private_subnet_2_id
 
   target_group_arn = module.alb.target_group_arn
-  desired_capacity = 0
-  min_size         = 0
+  desired_capacity = 2
+  min_size         = 2
   max_size         = 4
 }
 module "rds" {
