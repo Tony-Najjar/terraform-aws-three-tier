@@ -60,13 +60,13 @@ resource "aws_security_group" "web" {
 
 resource "aws_security_group" "database" {
   name        = "${var.project_name}-database-sg"
-  description = "Allow database traffic from web tier"
+  description = "Allow database traffic from application  tier"
   vpc_id      = var.vpc_id
 
   ingress {
     description     = "Database access from web servers"
-    from_port       = 5432
-    to_port         = 5432
+    from_port       = 3306
+    to_port         = 3306
     protocol        = "tcp"
     security_groups = [aws_security_group.web.id]
   }

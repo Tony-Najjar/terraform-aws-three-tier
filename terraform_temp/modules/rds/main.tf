@@ -18,6 +18,7 @@ resource "aws_db_instance" "main" {
   identifier = "${var.project_name}-database"
 
   engine = "mysql"
+  port   = 3306
 
   engine_version = "8.0"
 
