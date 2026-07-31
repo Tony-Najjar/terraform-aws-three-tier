@@ -104,7 +104,9 @@ The database layer provides a secure and managed data storage solution using Ama
 
 # Architecture Diagram
 
-_Add your architecture diagram here._
+### Architecture Diagram
+
+![AWS Three-Tier Architecture](architecture.png)
 
 Example:
 
@@ -238,10 +240,6 @@ To remove the environment when it is no longer needed:
 terraform destroy
 
 # Screenshots
-
-### Architecture Diagram
-
-![AWS Three-Tier Architecture](architecture.png)
 
 ### AWS WAF
 
