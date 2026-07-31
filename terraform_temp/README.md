@@ -237,54 +237,29 @@ To remove the environment when it is no longer needed:
 
 terraform destroy
 
-
 # Screenshots
 
-_Add Terraform apply screenshot_
+### Architecture Diagram
 
----
+![Architecture](screenshots/vscode_architecture.png)
 
-## AWS VPC Architecture
+### AWS WAF
 
-_Add VPC screenshot_
+![AWS WAF](screenshots/waf.png)
 
----
+### Amazon CloudFront
 
-## Application Load Balancer
+![CloudFront Overview](screenshots/cloudfront_overview.png)
 
-_Add ALB screenshot_
+![CloudFront Origin](screenshots/cloudfront_origin.png)
 
----
+### Amazon CloudWatch
 
-## EC2 Instances Running NGINX
+![CloudWatch Dashboard](screenshots/cloudwatch_dashboard.png)
 
-_Add EC2 screenshot_
+![CloudWatch Widgets](screenshots/cloudwatch_widgets.png)
 
----
-
-## Auto Scaling Group
-
-_Add ASG screenshot_
-
----
-
-## Amazon RDS MySQL
-
-_Add RDS screenshot_
-
----
-
-## CloudFront Distribution
-
-_Add CloudFront screenshot_
-
----
-
-## Application Running
-
-_Add browser screenshot showing deployed application_
-
----
+## ![CloudWatch Alarms](screenshots/cloudwatch_alarms.png)
 
 # Security Design
 
@@ -311,6 +286,7 @@ This project demonstrates practical experience with:
 - EC2 Management
 - Auto Scaling
 - Load Balancing
+- CloudWatch Monitoring
 - CloudFront CDN
 - Amazon RDS MySQL
 - Git Version Control
@@ -324,11 +300,23 @@ Possible enhancements:
 - Add Route 53 for custom domain management
 - Add AWS Certificate Manager (ACM) HTTPS certificates
 - Add CI/CD pipeline using GitHub Actions
-- Add monitoring with CloudWatch
 - Add centralized logging
 - Add containerization using Docker and ECS/EKS
+- Store Terraform state remotely in an S3 backend with DynamoDB state locking
+- Add automated Terraform security scanning (e.g., tfsec or Checkov)
 
 ---
+
+## Key Features
+
+- Modular Terraform architecture
+- Custom Amazon VPC with public and private subnets
+- Application Load Balancer and Auto Scaling Group
+- Amazon RDS MySQL
+- Amazon CloudFront
+- AWS WAF
+- Amazon CloudWatch monitoring dashboards
+- Infrastructure as Code with Terraform
 
 # Conclusion
 
