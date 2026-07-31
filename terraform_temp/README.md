@@ -241,7 +241,7 @@ terraform destroy
 
 ### Architecture Diagram
 
-![Architecture](screenshots/vscode_architecture.png)
+![AWS Three-Tier Architecture](architecture.png)
 
 ### AWS WAF
 
