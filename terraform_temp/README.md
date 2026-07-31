@@ -237,6 +237,7 @@ To remove the environment when it is no longer needed:
 
 terraform destroy
 
+
 # Screenshots
 
 _Add Terraform apply screenshot_
