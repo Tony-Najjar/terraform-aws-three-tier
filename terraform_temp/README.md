@@ -20,7 +20,11 @@ The environment includes:
 - Amazon RDS MySQL database
 - Amazon CloudFront distribution
 - AWS WAF protection
-- CloudWatch monitoring dashboards
+- CloudWatch monitoring dashboards :
+  EC2 CPU monitoring
+  ALB request count
+  RDS metrics
+  CloudWatch alarms
 
 Terraform modules are used to organize infrastructure components into reusable and maintainable building blocks. This allows the environment to be deployed consistently through automated Infrastructure as Code practices.
 
@@ -63,6 +67,7 @@ The infrastructure is deployed inside a custom Amazon VPC with separate public a
 - Application Load Balancer distributes incoming requests across EC2 instances.
 - Auto Scaling Group maintains application availability by automatically adjusting EC2 capacity.
 - NGINX is used as the web server running on EC2 instances.
+- RDS MySQL stores application data privately
 
 ### Database Layer
 
@@ -222,7 +227,7 @@ terraform plan
 Apply the Terraform configuration to provision the AWS three-tier architecture.
 
 ```bash
-terraform apply
+terraform apply -auto-approve
 ```
 
 ### 6. Verify Deployment
@@ -265,9 +270,12 @@ Security practices implemented:
 
 - Web servers are protected using security groups.
 - Database resources are deployed in private subnets.
-- Database access is restricted to application servers.
+- Database access is restricted to application servers. No access to the internet
 - Infrastructure is managed through Terraform instead of manual configuration.
 - No AWS credentials or sensitive information are stored in the repository.
+- WAF protects public traffic
+- IAM role instead of access key
+- HTTPSt hrough CloudFront/ALB
 
 ---
 
@@ -315,6 +323,14 @@ Possible enhancements:
 - AWS WAF
 - Amazon CloudWatch monitoring dashboards
 - Infrastructure as Code with Terraform
+
+## Lessons Learned
+
+- Designed a multi-tier AWS architecture using Terraform modules
+- Implemented network segmentation with public/private subnets
+- Configured ALB with Auto Scaling
+- Secured RDS MySQL using security groups
+- Automated cloud infrastructure deployment
 
 # Conclusion
 
