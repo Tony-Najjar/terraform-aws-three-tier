@@ -244,25 +244,8 @@ To remove the environment when it is no longer needed:
 
 terraform destroy
 
-# Screenshots
 
-### AWS WAF
 
-![AWS WAF](screenshots/waf.png)
-
-### Amazon CloudFront
-
-![CloudFront Overview](screenshots/cloudfront_overview.png)
-
-![CloudFront Origin](screenshots/cloudfront_origin.png)
-
-### Amazon CloudWatch
-
-![CloudWatch Dashboard](screenshots/cloudwatch_dashboard.png)
-
-![CloudWatch Widgets](screenshots/cloudwatch_widgets.png)
-
-## ![CloudWatch Alarms](screenshots/cloudwatch_alarms.png)
 
 # Security Design
 
